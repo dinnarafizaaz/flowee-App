@@ -100,3 +100,8 @@ class AppTheme {
     );
   }
 }
+
+String FormatRupiah(double price){
+  
+  return "";
+}

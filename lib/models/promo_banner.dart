@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 class PromoBanner {
   final String title;
-  final String subTitle;
+  final String subtitle;
   final String imageUrl;
   final List<Color> gradiantColors;
 
-  PromoBanner({required this.title, required this.subTitle, required this.imageUrl, required this.gradiantColors});
+  PromoBanner({required this.title, required this.subtitle, required this.imageUrl, required this.gradiantColors});
 }
