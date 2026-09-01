@@ -105,18 +105,18 @@ final List<PromoBanner> dummyBanners = [
     title: 'Diskon 20%',
     subtitle: 'Untuk semua buket mawar minggu ini',
     imageUrl: 'https://img.pikbest.com/origin/09/17/05/62EpIkbEsTQ8w.jpg!bw800',
-    gradiantColors: [Color(0xFFE85C8A), Color(0xFFB23A63)],
+    gradientColors: [Color(0xFFE85C8A), Color(0xFFB23A63)],
   ),
   PromoBanner(
     title: 'Koleksi Pernikahan',
     subtitle: 'Rangkaian bunga eksklusif untuk hari bahagiamu',
     imageUrl: 'https://loremflickr.com/640/480/peony?lock=1',
-    gradiantColors: const [Color(0xFF8E5FBF), Color(0xFF5B3A87)],
+    gradientColors: const [Color(0xFF8E5FBF), Color(0xFF5B3A87)],
   ),
   PromoBanner(
     title: 'Gratis Ongkir',
     subtitle: 'Se-Jabodetabek untuk pembelian di atas Rp100.000',
     imageUrl: 'https://loremflickr.com/640/480/sunflower?lock=1',
-    gradiantColors: const [Color(0xFFE8A33D), Color(0xFFC97A1F)],
+    gradientColors: const [Color(0xFFE8A33D), Color(0xFFC97A1F)],
   ),
 ];

@@ -101,7 +101,18 @@ class AppTheme {
   }
 }
 
-String FormatRupiah(double price){
-  
-  return "";
+String formatRupiah(double price) {
+  final str = price.toStringAsFixed(0);
+  final buffer = StringBuffer();
+
+  for (int i = 0; i < str.length; i++) {
+    final posFromEnd = str.length - i;
+    buffer.write(str[i]);
+    // Titik ditambahkan jika sisa karakter di kanan adalah kelipatan 3 (posFromEnd % 3 == 1)
+    if (posFromEnd > 1 && posFromEnd % 3 == 1) {
+      buffer.write('.');
+    }
+  }
+
+  return 'Rp ${buffer.toString()}';
 }
