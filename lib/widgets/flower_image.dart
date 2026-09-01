@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+
+//LOAD IMAGE
+
 /**
  * Menampilkan gambar dari URL Internet
  * 1.Sedang dimuat: menampilkan indikator loading
  * 2.gagal memuat: menampilkan indikator ganti
  */
+
 class FlowerNetworkImage extends StatelessWidget {
   const FlowerNetworkImage({
     super.key, 
@@ -44,7 +48,6 @@ class FlowerNetworkImage extends StatelessWidget {
               //Kalo Flutter ukuran total file maka akan menghitung proses download gambar
               //kalo Flutter tidak tahu total ukuran file maka akan mengembalikan null
               value: progress.expectedTotalBytes != null ? progress.cumulativeBytesLoaded / progress.expectedTotalBytes! : null,
-              //
             ),
           ),
         );
