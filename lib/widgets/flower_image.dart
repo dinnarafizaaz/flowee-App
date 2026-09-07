@@ -11,11 +11,12 @@ import 'package:flutter/material.dart';
 class FlowerNetworkImage extends StatelessWidget {
   const FlowerNetworkImage({
     super.key, 
-    //Constructures
+
+    //Constructures = Peng Inilisialisasi PROPERTI
     required this.imageUrl, 
     required this.fallbackIcon, 
     required this.fallbackColor, 
-    required this.fit
+    this.fit = BoxFit.cover
     });
 
     //Properties
