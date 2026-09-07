@@ -23,8 +23,9 @@ class ProductSummary extends StatelessWidget {
             ],
           ),
         ),
+
         //Panggil rating definition
-        
+        _RatingBadge(rating: flower.rating)
       ],
     );
   }
@@ -83,6 +84,6 @@ class _RatingBadge extends StatelessWidget {
           )
         ],
       ),
-      );
+    );
   }
 }
