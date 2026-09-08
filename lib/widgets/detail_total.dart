@@ -6,7 +6,7 @@ import 'package:flutter_application/theme/app_theme.dart';
 class DetailTotalBar extends StatelessWidget {
   const DetailTotalBar({super.key, required this.totalPrice});
 
-  final Double totalPrice;
+  final double totalPrice;
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +31,7 @@ class DetailTotalBar extends StatelessWidget {
               style: TextStyle(fontSize: 13, color: AppTheme.textSecondary),
             ),
             Text(
-              formatRupiah(totalPrice as double),
+              formatRupiah(totalPrice),
               style: TextStyle(
                 fontSize: 19,
                 fontWeight: FontWeight.w800,
