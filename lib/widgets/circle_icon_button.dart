@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 //TOMBOL BULAT DENGAN ICON DI TENGAHNYA YANG MUNCUL DI BEBERAPA SCREEN
 class CircleIconButton extends StatelessWidget {
-  const CircleIconButton({super.key, required this.icon, required this.onTap, required this.iconColor});
+  const CircleIconButton({super.key, required this.icon, required this.onTap, this.iconColor = Colors.black87});
 
   final IconData icon;
   final VoidCallback onTap;
