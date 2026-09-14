@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application/data/dummy_data.dart';
 import 'package:flutter_application/models/flower.dart';
+import 'package:flutter_application/screen/detail_screen.dart';
+import 'package:flutter_application/widgets/home_header.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -20,13 +22,34 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   List<Flower> get _filteredFlowers {
-    return dummyFlowers.where((Flower) {
-      
-    });
+    return dummyFlowers.where((flower) {
+      final matchesQuery = flower.name.toLowerCase().contains(_query.toLowerCase());
+      final matcheCategory = _selectedCategory == 'semua' || flower.category == _selectedCategory;
+      return matchesQuery && matcheCategory;
+    }).toList();
+  }
+
+  void _openDetail(Flower flower) {
+    Navigator.of(
+      context,
+    ).push(MaterialPageRoute(builder: (_) => DetailScreen(flower: flower)));
+
   }
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+
+
+    return SafeArea(
+      child: CustomScrollView(
+        slivers: [
+          SliverToBoxAdapter(
+            child: HomeHeader(
+              _selectedCategory
+              ),
+          )
+        ],
+      ),
+    );
   }
 }
