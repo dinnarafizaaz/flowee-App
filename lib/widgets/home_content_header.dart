@@ -11,13 +11,13 @@ class HomeContentHeader extends StatelessWidget {
   const HomeContentHeader({
     super.key,
     required this.selectedCategory,
-    required this.category,
+    required this.categories,
     required this.onQueryChanged,
     required this.onCaterogySelected,
   });
 
   final String selectedCategory;
-  final List<String> category;
+  final List<String> categories;
   final ValueChanged<String> onQueryChanged;
   final ValueChanged<String> onCaterogySelected;
 
@@ -35,7 +35,7 @@ class HomeContentHeader extends StatelessWidget {
           SearchField(onChanged: onQueryChanged),
           SizedBox(height: 18), 
           CategoryChipList(
-            categories: category, 
+            categories: categories, 
             selectedCategory: selectedCategory, 
             onSelected: onCaterogySelected
           ),
